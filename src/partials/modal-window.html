@@ -1,0 +1,81 @@
+<div class="backdrop is-hidden" data-backdrop>
+  <div class="modal">
+    <button class="close" type="button" data-close-modal>
+      <svg width="18" height="18">
+        <use
+          class="close-modal-icon"
+          href="./images/sprite.svg#close-menu"
+        ></use>
+      </svg>
+    </button>
+    <!-- <include src="./partials/order-form.html"></include> -->
+        <form class="form-field">
+          <p class="form-field__title">Buy now!</p>
+          <div class="contacts-container">
+            <input type="text" class="form-text" name="user-name" placeholder="Name*" autocomplete="off" pattern="^[a-zA-Z\s]+$"
+              required>
+            <input type="tel" class="form-text" name="user-tel" placeholder="Tel*" autocomplete="off" pattern="[0-9]{1,18}"
+              required>
+            <input type="mail" class="form-text" name="user-mail" placeholder="Mail*" autocomplete="off" required>
+            <input type="text" class="form-text" name="user-address" placeholder="Address Line*" autocomplete="off" required>
+          </div>
+          <div class="select-form">
+            <label class="select-text" for="ice">Choose Ice-Cream</label>
+            <select class="select-ice" id="ice" name="ice">
+              <option value=""></option>
+              <option value="">Dark Chocolate</option>
+              <option value="">Milk Chocolate</option>
+              <option value="">Raspberry</option>
+              <option value="">Strawberry</option>
+              <option value="">Green Tea</option>
+              <option value="">Pistachio</option>
+              <option value="">Blue Moon</option>
+              <option value="">Vanilla</option>
+              <option value="">Milk</option>
+              <option value="">Snikears</option>
+            </select>
+          </div>
+        
+          <p class="pay-text">Pay with</p>
+        
+          <div class="pay-card" role="group">
+            <div class="cards">
+              <input class="select-box" id="visa" name="pay" type="radio" value="mastercard"/>
+              <label for="visa">
+                <svg class="card-svg">
+                  <use href="./images/sprite-form.svg#visa"></use>
+                </svg>
+              </label>
+            </div>
+        
+            <div class="cards">
+              <input class="select-box" id="mastercard" name="pay" type="radio" value="mastercard" />
+              <label for="mastercard">
+                <svg class="card-svg">
+                  <use href="./images/sprite-form.svg#mastercard"></use>
+                </svg>
+              </label>
+            </div>
+        
+            <div class="cards">
+              <input class="select-box" id="paypal" name="pay" type="radio" value="paypal" />
+              <label for="paypal">
+                <svg class="card-svg">
+                  <use href="./images/sprite-form.svg#paypal"></use>
+                </svg>
+              </label>
+            </div>
+          </div>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" name="message" />
+            <span class="checkbox__icon"></span>
+            <span class="checkbox__subscribe">I agree to become addicted to delicious ice cream
+              <a class="checkbox__link" href="">Agreement conditions</a>
+            </span>
+          </label>
+
+        <button class="form-btn btn-buy" disabled>Order</button>
+        </form>
+  </div>
+</div>

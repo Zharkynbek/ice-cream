@@ -1,0 +1,110 @@
+.mobile-menu {
+  // display: none;
+
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 3;
+
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 60px;
+  padding-bottom: 170px;
+
+  background: #e17992;
+
+  box-shadow: rgba(0, 0, 0, 0.5) -37.05px -36px 30px;
+
+  transform: translateY(-100%);
+  transition: transform 250ms $bezier-page;
+
+  &.is-open {
+    display: block;
+    transform: translateY(0%);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 250px;
+    height: 502px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 260px;
+    height: 1020px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+    opacity: 0;
+  }
+
+  &__icon {
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+
+    &--menu {
+      fill: #d41443;
+      &:hover,
+      &:focus {
+        fill:white;
+      }
+
+    }
+    &--cross {
+      fill: white;
+      &:hover,
+      &:focus {
+        fill: #d41443;
+      }
+    }
+
+  }
+}
+
+.mobile-menu {
+  &__menu-button--open {
+    background-color: transparent;
+    border: transparent;
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__menu-button--close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    background-color: transparent;
+    border: transparent;
+  }
+
+  &__button.btn-buy {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 767px) {
+      min-width: 209px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      min-width: 186px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.btn-buy {
+  &__icon {
+    padding-top: 3.5px;
+    padding-left: 6px;
+  }
+}

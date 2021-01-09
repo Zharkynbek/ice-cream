@@ -1,0 +1,181 @@
+.section-pictures {
+  position: relative;
+}
+
+.pictures-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 123px;
+
+  position: absolute;
+
+  top: -47px;
+  right: 0;
+  left: 0;
+  @include for-size(tablet) {
+    top: -103px;
+  }
+  @include for-size(desktop) {
+    top: -160px;
+  }
+}
+
+.pictures {
+  border-radius: 15%;
+  max-height: 40px;
+  margin: 0;
+  transition-duration: 250ms;
+  transition-timing-function: $bezier-page;
+
+  @include for-size(mobile) {
+    &:hover,
+    &:focus {
+      transform: scale(3);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+
+  @include for-size(tablet) {
+    max-height: 85px;
+
+    &:hover,
+    &:focus {
+      transform: scale(2);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+
+  @include for-size(desktop) {
+    max-height: 138px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+}
+
+.img-right {
+  @include for-size(mobile) {
+    transition-duration: 250ms;
+
+    &:hover,
+    &:focus {
+      transform: translate(30px);
+    }
+  }
+
+  @include for-size(tablet) {
+    transition: 0s;
+
+    &:hover,
+    &:focus {
+      transform: translate(0px);
+    }
+  }
+}
+
+.img-left {
+  @include for-size(mobile) {
+    transition-duration: 250ms;
+
+    &:hover,
+    &:focus {
+      transform: translate(-30px);
+    }
+  }
+
+  @include for-size(tablet) {
+    transition: 0s;
+
+    &:hover,
+    &:focus {
+      transform: translate(0px);
+    }
+  }
+}
+
+.pictures-one {
+  max-height: 80px;
+  border-radius: 15%;
+  transition-duration: 250ms;
+  transition-timing-function: $bezier-page;
+
+  @include for-size(mobile) {
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+      box-shadow: 1px 2px 10px -1px $menu-color;
+    }
+  }
+
+  @include for-size(tablet) {
+    max-height: 175px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.25);
+    }
+  }
+
+  @include for-size(desktop) {
+    max-height: 285px;
+  }
+}
+
+.img-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2px;
+
+  @include for-size(tablet) {
+    margin-right: 4px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 6px;
+  }
+}
+
+.cream {
+  margin-bottom: 2px;
+
+  @include for-size(tablet) {
+    margin-bottom: 4px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 6px;
+  }
+}
+
+.glass {
+  margin-top: 10px;
+  margin-bottom: 2px;
+
+  @include for-size(tablet) {
+    margin-bottom: 4px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 6px;
+    margin-top: 30px;
+  }
+}
+
+.dog {
+  margin-top: -10px;
+  margin-bottom: 2px;
+
+  @include for-size(tablet) {
+    margin-bottom: 4px;
+    margin-top: -30px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 6px;
+    margin-top: -60px;
+  }
+}

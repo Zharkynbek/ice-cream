@@ -1,0 +1,187 @@
+.page-header {
+  width: 100%;
+  position: relative;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-icon {
+    display: block;
+    margin-right: 20px;
+
+    @include for-size(desktop) {
+      position: absolute;
+      top: 37px;
+      left: -7%;
+    }
+  }
+
+  &__logo.link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-title {
+    display: block;
+    @include fonts(26px, 400, 1.12, 0.04em);
+    font-family: $second-font;
+    text-transform: uppercase;
+
+    color: $accent-color;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 6px 15px;
+
+    @include for-size(tablet) {
+      max-width: 1199px;
+      padding: 37px 34px 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 1050px;
+      padding: 37px 0 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  .title {
+    padding-right: 12px;
+  }
+}
+
+.btn-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 160px;
+  height: 44px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+
+  border-radius: 22px;
+  border: inherit;
+
+  color: #d41443;
+  fill: #d41443;
+
+  background-color: white;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: white;
+    background: #c7133e;
+    fill: white;
+
+    animation: none;
+
+    @keyframes pulse {
+      to {
+        box-shadow: 0 0 5px 5px rgba(232, 76, 61, 0.7);
+      }
+    }
+  }
+}
+
+.page-header__nav {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+
+  color: white;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  .list {
+    display: flex;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  .link {
+    display: block;
+    transition: all 0.2s $bezier-page;
+  }
+
+  .link:hover,
+  .link:focus {
+    color: #d41443;
+    transform: rotateZ(-30deg) scale(1.4);
+  }
+}
+.current {
+  color: #d41443;
+  font-size: 20px;
+}
+.blink-1:hover,
+.blink-1:focus {
+	-webkit-animation: blink-1 0.6s both;
+	        animation: blink-1 0.6s both;
+}
+
+ @-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
